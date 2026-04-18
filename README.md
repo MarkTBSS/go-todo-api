@@ -55,6 +55,28 @@ The API will be available at `http://localhost:8080`.
 go test ./handlers/ -v
 ```
 
+## CI/CD Pipeline
+
+This project uses **GitHub Actions** for automated testing and deployment.
+
+**Pipeline flow:** Push to `main` → Run Tests → Build Docker Image → Push to ECR → Deploy to ECS
+
+See pipeline runs: [GitHub Actions](https://github.com/MarkTBSS/go-todo-api/actions)
+
+## AWS Architecture
+
+```
+Internet → ALB → ECS Fargate (API) → RDS PostgreSQL
+```
+
+| Service | Purpose |
+|---------|---------|
+| ECS Fargate | Run API container |
+| RDS PostgreSQL | Database |
+| ALB | Public endpoint |
+| ECR | Docker image registry |
+| GitHub Actions | CI/CD pipeline |
+
 ## API Usage Examples
 
 ### Create a Todo
