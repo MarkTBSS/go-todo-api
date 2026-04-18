@@ -8,7 +8,6 @@ CRUD API for managing todos, built with Golang, Gin, and GORM.
 - **Gin** — HTTP web framework
 - **GORM** — ORM for database operations
 - **PostgreSQL** — Relational database
-- **Redis** — Caching layer for performance
 - **Docker & Docker Compose** — Containerization
 
 ## Database Design
