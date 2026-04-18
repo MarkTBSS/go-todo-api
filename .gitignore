@@ -2,3 +2,6 @@
 *.exe
 /tmp
 vendor/
+assignment.md
+guide.md
+guide_aws.md
